@@ -341,252 +341,35 @@ cd tqms</code></pre>
   </div>
 </section>
 
-<!-- ══ 使用说明书 ════════════════════════════════════════ -->
-<section class="manual" id="manual">
+<!-- ══ 使用说明书入口 ═════════════════════════════════════ -->
+<section class="manual-entry" id="manual">
   <div class="container">
     <div class="section-header reveal">
       <span class="section-tag">使用说明书</span>
-      <h2>快速上手指南</h2>
-      <p>从登录到报告，完整操作流程一览</p>
+      <h2>完整操作指南</h2>
+      <p>10 个功能模块，手把手带你掌握问天台每一项能力</p>
     </div>
-
-    <div class="manual-layout">
-      <!-- 左侧目录 -->
-      <aside class="manual-toc reveal">
-        <div class="toc-title">目录</div>
-        <ul>
-          <li><a href="#m-login" class="toc-link active">1. 登录系统</a></li>
-          <li><a href="#m-dashboard" class="toc-link">2. 仪表盘</a></li>
-          <li><a href="#m-project" class="toc-link">3. 项目管理</a></li>
-          <li><a href="#m-plan" class="toc-link">4. 测试计划</a></li>
-          <li><a href="#m-case" class="toc-link">5. 测试用例</a></li>
-          <li><a href="#m-task" class="toc-link">6. 测试执行</a></li>
-          <li><a href="#m-defect" class="toc-link">7. 缺陷管理</a></li>
-          <li><a href="#m-report" class="toc-link">8. 测试报告</a></li>
-          <li><a href="#m-system" class="toc-link">9. 系统管理</a></li>
-        </ul>
-      </aside>
-
-      <!-- 右侧内容 -->
-      <div class="manual-content">
-
-        <div class="manual-section reveal" id="m-login">
-          <div class="ms-header">
-            <span class="ms-num">01</span>
-            <h3>登录系统</h3>
-          </div>
-          <div class="ms-body">
-            <p>访问系统地址后，进入登录页面。使用用户名和密码登录。</p>
-            <div class="ms-tip tip-info">
-              <strong>默认管理员账号：</strong><code>admin</code> &nbsp;/&nbsp; <code>Admin@123</code><br/>
-              连续登录失败 5 次后账号将被锁定 15 分钟。
-            </div>
-            <div class="ms-steps">
-              <div class="ms-step">① 输入用户名或邮箱</div>
-              <div class="ms-step">② 输入密码，回车或点击「登录」</div>
-              <div class="ms-step">③ 登录成功后自动跳转至仪表盘</div>
-            </div>
+    <div class="manual-entry-card reveal">
+      <div class="me-left">
+        <div class="me-icon">📖</div>
+        <div class="me-info">
+          <h3>问天台 · 使用说明书 v1.0</h3>
+          <p>涵盖登录、仪表盘、项目管理、测试计划、测试用例、测试执行、缺陷管理（列表/看板/甘特三视图）、测试报告、系统管理、消息通知共 10 个完整模块。</p>
+          <div class="me-tags">
+            <span>🔐 登录系统</span><span>📊 仪表盘</span><span>📁 项目管理</span>
+            <span>📅 测试计划</span><span>📋 测试用例</span><span>▶️ 测试执行</span>
+            <span>🐛 缺陷管理</span><span>📈 测试报告</span><span>⚙️ 系统管理</span>
           </div>
         </div>
-
-        <div class="manual-section reveal" id="m-dashboard">
-          <div class="ms-header">
-            <span class="ms-num">02</span>
-            <h3>仪表盘</h3>
-          </div>
-          <div class="ms-body">
-            <p>仪表盘展示当前用户可见的项目维度质量数据，右上角可切换项目范围。</p>
-            <div class="ms-card-list">
-              <div class="ms-card">
-                <span class="ms-card-icon">📁</span>
-                <div><strong>项目总数</strong><br/>点击可跳转至项目管理</div>
-              </div>
-              <div class="ms-card">
-                <span class="ms-card-icon">📋</span>
-                <div><strong>测试用例</strong><br/>点击可跳转至用例列表</div>
-              </div>
-              <div class="ms-card">
-                <span class="ms-card-icon">🐛</span>
-                <div><strong>缺陷总数 / 待处理缺陷</strong><br/>点击可跳转至缺陷列表</div>
-              </div>
-              <div class="ms-card">
-                <span class="ms-card-icon">▶️</span>
-                <div><strong>测试任务 / 已完成任务</strong><br/>点击可跳转至执行任务</div>
-              </div>
-            </div>
-            <p>下方图表展示缺陷状态分布、严重程度分布和近期测试计划。</p>
-          </div>
-        </div>
-
-        <div class="manual-section reveal" id="m-project">
-          <div class="ms-header">
-            <span class="ms-num">03</span>
-            <h3>项目管理</h3>
-          </div>
-          <div class="ms-body">
-            <p>项目是所有测试活动的顶层容器，测试计划、用例、缺陷均归属于某个项目。</p>
-            <div class="ms-steps">
-              <div class="ms-step">① 点击「新建项目」填写项目名称、描述、版本号</div>
-              <div class="ms-step">② 在项目详情中管理项目成员，分配角色</div>
-              <div class="ms-step">③ 项目卡片展示用例通过率、缺陷数、任务进度</div>
-            </div>
-            <div class="ms-tip tip-warn">
-              <strong>注意：</strong>非管理员用户只能看到自己参与的项目（取决于数据权限配置）。
-            </div>
-          </div>
-        </div>
-
-        <div class="manual-section reveal" id="m-plan">
-          <div class="ms-header">
-            <span class="ms-num">04</span>
-            <h3>测试计划</h3>
-          </div>
-          <div class="ms-body">
-            <p>测试计划将测试用例组织起来，并生成可分配的执行任务。</p>
-            <div class="ms-steps">
-              <div class="ms-step">① 新建计划：填写名称、关联项目、版本、起止日期</div>
-              <div class="ms-step">② 添加用例至计划，可按模块分组管理</div>
-              <div class="ms-step">③ 点击「生成执行任务」，选择执行人后批量创建测试任务</div>
-              <div class="ms-step">④ 计划详情页可查看关联的所有执行任务及进度</div>
-            </div>
-            <div class="ms-tip tip-info">
-              计划状态：草稿 → 进行中 → 已完成 → 已逾期（系统自动判断）
-            </div>
-          </div>
-        </div>
-
-        <div class="manual-section reveal" id="m-case">
-          <div class="ms-header">
-            <span class="ms-num">05</span>
-            <h3>测试用例</h3>
-          </div>
-          <div class="ms-body">
-            <p>测试用例是核心资产，支持树形模块管理和 Excel 批量操作。</p>
-            <div class="ms-steps">
-              <div class="ms-step">① 左侧模块树：新增/重命名/删除模块，点击选中后右侧只展示该模块用例</div>
-              <div class="ms-step">② 新建用例：填写标题、前置条件、测试步骤、预期结果、优先级、类型</div>
-              <div class="ms-step">③ 点击用例编号可打开详情抽屉查看完整内容</div>
-            </div>
-            <div class="ms-card-list">
-              <div class="ms-card">
-                <span class="ms-card-icon">📥</span>
-                <div><strong>批量导入</strong><br/>下载 Excel 模板 → 填写 → 上传，导入结果逐行反馈成功/失败原因</div>
-              </div>
-              <div class="ms-card">
-                <span class="ms-card-icon">📤</span>
-                <div><strong>批量导出</strong><br/>按当前筛选条件导出为 Excel 文件</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="manual-section reveal" id="m-task">
-          <div class="ms-header">
-            <span class="ms-num">06</span>
-            <h3>测试执行</h3>
-          </div>
-          <div class="ms-body">
-            <p>测试任务由测试计划生成，每个任务包含一批待执行的用例。</p>
-            <div class="ms-steps">
-              <div class="ms-step">① 打开任务，逐条点击用例旁的状态按钮：通过 / 失败 / 跳过 / 阻塞</div>
-              <div class="ms-step">② 可填写执行备注，上传附件截图作为执行证据</div>
-              <div class="ms-step">③ 执行结果为「失败」时，点击「提交缺陷」直接关联创建缺陷</div>
-              <div class="ms-step">④ 顶部进度条实时展示通过率和完成数量</div>
-            </div>
-            <div class="ms-tip tip-info">
-              任务完成度达 100% 后，状态自动变更为「已完成」。
-            </div>
-          </div>
-        </div>
-
-        <div class="manual-section reveal" id="m-defect">
-          <div class="ms-header">
-            <span class="ms-num">07</span>
-            <h3>缺陷管理</h3>
-          </div>
-          <div class="ms-body">
-            <p>缺陷管理提供三种视图，可根据习惯自由切换。</p>
-            <div class="ms-card-list">
-              <div class="ms-card">
-                <span class="ms-card-icon">📋</span>
-                <div><strong>列表视图</strong><br/>表格形式，支持多字段筛选、排序，适合批量操作</div>
-              </div>
-              <div class="ms-card">
-                <span class="ms-card-icon">🗂️</span>
-                <div><strong>看板视图</strong><br/>按状态分 7 列泳道，拖拽卡片即可流转状态</div>
-              </div>
-              <div class="ms-card">
-                <span class="ms-card-icon">📊</span>
-                <div><strong>甘特图视图</strong><br/>以处理人为泳道，按计划时间轴展示，颜色区分严重程度</div>
-              </div>
-            </div>
-            <p style="margin-top:12px"><strong>缺陷状态流转：</strong></p>
-            <div class="ms-flow">
-              <span class="flow-node">新建</span><span class="flow-arrow">→</span>
-              <span class="flow-node">已指派</span><span class="flow-arrow">→</span>
-              <span class="flow-node">修复中</span><span class="flow-arrow">→</span>
-              <span class="flow-node">待验证</span><span class="flow-arrow">→</span>
-              <span class="flow-node green">已关闭</span>
-              <br/>
-              <span class="flow-note">待验证 → 重新打开 → 修复中（验证不通过时）</span>
-            </div>
-            <div class="ms-tip tip-info" style="margin-top:12px">
-              状态变更和指派操作会自动发送站内消息通知给相关人员。
-            </div>
-          </div>
-        </div>
-
-        <div class="manual-section reveal" id="m-report">
-          <div class="ms-header">
-            <span class="ms-num">08</span>
-            <h3>测试报告</h3>
-          </div>
-          <div class="ms-body">
-            <p>基于测试计划一键生成正式测试报告，包含多维度质量分析。</p>
-            <div class="ms-steps">
-              <div class="ms-step">① 在测试计划详情页点击「生成报告」</div>
-              <div class="ms-step">② 报告自动统计：总用例数、通过数、失败数、通过率、缺陷数</div>
-              <div class="ms-step">③ 图表分析：缺陷严重程度、状态分布、处理人排行、分类分布、近30天趋势</div>
-              <div class="ms-step">④ 点击「分享」生成公开链接，无需登录即可查看报告</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="manual-section reveal" id="m-system">
-          <div class="ms-header">
-            <span class="ms-num">09</span>
-            <h3>系统管理</h3>
-          </div>
-          <div class="ms-body">
-            <p>仅管理员可见，包含用户、角色、权限三个子模块。</p>
-            <div class="ms-card-list">
-              <div class="ms-card">
-                <span class="ms-card-icon">👤</span>
-                <div><strong>用户管理</strong><br/>创建/编辑/禁用用户，重置密码，分配角色</div>
-              </div>
-              <div class="ms-card">
-                <span class="ms-card-icon">🏷️</span>
-                <div><strong>角色管理</strong><br/>创建角色，配置数据权限（全部/个人），绑定功能权限</div>
-              </div>
-              <div class="ms-card">
-                <span class="ms-card-icon">🔑</span>
-                <div><strong>权限管理</strong><br/>树形结构管理菜单与按钮级权限，支持增删改</div>
-              </div>
-            </div>
-            <div class="ms-tip tip-warn">
-              <strong>数据权限说明：</strong>
-              <ul style="margin:6px 0 0 16px;line-height:2">
-                <li><strong>全部数据</strong>：可查看系统内所有项目和缺陷</li>
-                <li><strong>个人参与数据</strong>：只能查看自己参与项目的相关数据</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /manual-content -->
-    </div><!-- /manual-layout -->
+      </div>
+      <a href="manual.html" class="me-btn">
+        查看完整说明书
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+      </a>
+    </div>
   </div>
 </section>
+
 
 <!-- ══ 典故 CTA ══════════════════════════════════════════ -->
 <section class="lore-cta">

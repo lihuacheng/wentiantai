@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>使用说明书 · 问天台</title>
+  <meta name="description" content="问天台测试质量管理平台完整使用说明书" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="css/manual.css" />
+</head>
+<body>
+
+<!-- ══ 顶部导航 ══════════════════════════════════════════ -->
+<header class="top-bar">
+  <div class="top-inner">
+    <a href="index.html" class="top-logo">
+      <img src="images/logo.svg" width="28" height="28" alt="问天台" />
+      <span>问天台</span>
+    </a>
+    <div class="top-breadcrumb">
+      <a href="index.html">首页</a>
+      <span class="sep">/</span>
+      <span>使用说明书</span>
+    </div>
+    <a href="https://github.com/lihuacheng/tqms" target="_blank" class="top-gh">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      GitHub
+    </a>
+  </div>
+</header>
+
+<!-- ══ 主体布局 ══════════════════════════════════════════ -->
+<div class="page-layout">
+
+  <!-- 左侧固定导航 -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+      使用说明书
+    </div>
+    <ul class="sidebar-nav">
+      <li class="nav-group-title">准备工作</li>
+      <li><a href="#s-login" class="nav-link">
+        <span class="nav-icon">🔐</span>登录系统
+      </a></li>
+      <li><a href="#s-dashboard" class="nav-link">
+        <span class="nav-icon">📊</span>仪表盘
+      </a></li>
+      <li class="nav-group-title">测试管理</li>
+      <li><a href="#s-project" class="nav-link">
+        <span class="nav-icon">📁</span>项目管理
+      </a></li>
+      <li><a href="#s-plan" class="nav-link">
+        <span class="nav-icon">📅</span>测试计划
+      </a></li>
+      <li><a href="#s-case" class="nav-link">
+        <span class="nav-icon">📋</span>测试用例
+      </a></li>
+      <li><a href="#s-task" class="nav-link">
+        <span class="nav-icon">▶️</span>测试执行
+      </a></li>
+      <li class="nav-group-title">缺陷与报告</li>
+      <li><a href="#s-defect" class="nav-link">
+        <span class="nav-icon">🐛</span>缺陷管理
+      </a></li>
+      <li><a href="#s-defect-list" class="nav-link nav-sub">
+        列表视图
+      </a></li>
+      <li><a href="#s-defect-kanban" class="nav-link nav-sub">
+        看板视图
+      </a></li>
+      <li><a href="#s-defect-gantt" class="nav-link nav-sub">
+        甘特图视图
+      </a></li>
+      <li><a href="#s-report" class="nav-link">
+        <span class="nav-icon">📈</span>测试报告
+      </a></li>
+      <li class="nav-group-title">系统配置</li>
+      <li><a href="#s-system" class="nav-link">
+        <span class="nav-icon">⚙️</span>系统管理
+      </a></li>
+      <li><a href="#s-notify" class="nav-link">
+        <span class="nav-icon">🔔</span>消息通知
+      </a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="index.html" class="back-link">← 返回官网</a>
+    </div>
+  </nav>
+
+  <!-- 右侧内容 -->
+  <main class="doc-main">
+
+    <!-- 文档头部 -->
+    <div class="doc-hero">
+      <div class="doc-hero-tag">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+        使用说明书 v1.0
+      </div>
+      <h1 class="doc-hero-title">问天台 · 完整操作指南</h1>
+      <p class="doc-hero-desc">本文档覆盖问天台测试质量管理平台的全部功能模块，帮助您快速掌握从项目创建到报告生成的完整测试流程。</p>
+      <div class="doc-hero-meta">
+        <span>📦 适用版本：v1.0+</span>
+        <span>🧑‍💻 适用角色：管理员 · 测试工程师 · 开发工程师</span>
+        <span>🕐 预计阅读：15 分钟</span>
+      </div>
+    </div>
+
+    <!-- ── 1. 登录系统 ──────────────────────────────── -->
+    <section class="doc-section" id="s-login">
+      <div class="section-label">01</div>
+      <h2>登录系统</h2>
+      <p>访问系统地址后进入登录页。左侧为卡通质检工程师动画与《天问》典故介绍，右侧填写账号密码登录。</p>
+
+      <div class="doc-screenshot">
+        <div class="ss-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ss-url">问天台 · 登录</span></div>
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/01_login.png" alt="登录页" loading="lazy"/>
+      </div>
+
+      <div class="info-box box-blue">
+        <div class="box-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          默认管理员账号
+        </div>
+        账号：<code>admin</code>&emsp;密码：<code>Admin@123</code>
+      </div>
+
+      <h3>操作步骤</h3>
+      <ol class="step-list">
+        <li>在「用户名 / 邮箱」输入框中填写账号</li>
+        <li>填写密码（支持回车键快捷提交）</li>
+        <li>点击「登录」按钮，验证成功后自动跳转至仪表盘</li>
+      </ol>
+
+      <div class="info-box box-warn">
+        <div class="box-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          安全提示
+        </div>
+        连续登录失败 <strong>5 次</strong>后，账号将被自动锁定 <strong>15 分钟</strong>。锁定期间需联系管理员手动解锁或等待时间到期。
+      </div>
+    </section>
+
+    <!-- ── 2. 仪表盘 ──────────────────────────────── -->
+    <section class="doc-section" id="s-dashboard">
+      <div class="section-label">02</div>
+      <h2>仪表盘</h2>
+      <p>登录后首先进入仪表盘，展示当前用户可见的项目质量数据概览。</p>
+
+      <div class="doc-screenshot">
+        <div class="ss-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ss-url">仪表盘</span></div>
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/02_dashboard.png" alt="仪表盘" loading="lazy"/>
+      </div>
+
+      <div class="card-grid cols-3">
+        <div class="info-card">
+          <div class="ic-icon" style="background:#fff3ea;color:#ff6a00">📁</div>
+          <div class="ic-body"><strong>项目总数</strong><p>点击可跳转至项目管理列表</p></div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#f0fdf4;color:#16a34a">📋</div>
+          <div class="ic-body"><strong>测试用例</strong><p>点击跳转至用例管理</p></div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#fef2f2;color:#dc2626">🐛</div>
+          <div class="ic-body"><strong>缺陷总数 / 待处理</strong><p>点击跳转至缺陷列表</p></div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#eff6ff;color:#2563eb">▶️</div>
+          <div class="ic-body"><strong>测试任务</strong><p>点击跳转至执行任务</p></div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#fdf4ff;color:#9333ea">✅</div>
+          <div class="ic-body"><strong>已完成任务</strong><p>统计已完成的执行任务</p></div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#fff7ed;color:#ea580c">📊</div>
+          <div class="ic-body"><strong>图表分析</strong><p>缺陷状态、严重程度分布</p></div>
+        </div>
+      </div>
+
+      <div class="info-box box-blue">
+        <div class="box-title">数据权限说明</div>
+        右上角可切换「全部项目」或特定项目范围。<strong>数据权限为「个人参与」的用户</strong>只能看到自己参与的项目数据。
+      </div>
+    </section>
+
+    <!-- ── 3. 项目管理 ──────────────────────────────── -->
+    <section class="doc-section" id="s-project">
+      <div class="section-label">03</div>
+      <h2>项目管理</h2>
+      <p>项目是所有测试活动的顶层容器，测试计划、用例、缺陷均归属于具体项目。</p>
+
+      <div class="doc-screenshot">
+        <div class="ss-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ss-url">项目管理</span></div>
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/03_projects.png" alt="项目管理" loading="lazy"/>
+      </div>
+
+      <h3>新建项目</h3>
+      <ol class="step-list">
+        <li>点击右上角「新建项目」按钮</li>
+        <li>填写项目名称、描述、当前版本号</li>
+        <li>保存后项目卡片出现在列表中</li>
+      </ol>
+
+      <h3>项目卡片</h3>
+      <p>每张卡片展示：项目名称、描述、版本、成员数、用例通过率、缺陷数、任务进度。点击卡片进入项目详情。</p>
+
+      <div class="info-box box-warn">
+        非管理员用户（数据权限为「个人参与」）只能看到自己被添加为成员的项目。
+      </div>
+    </section>
+
+    <!-- ── 4. 测试计划 ──────────────────────────────── -->
+    <section class="doc-section" id="s-plan">
+      <div class="section-label">04</div>
+      <h2>测试计划</h2>
+      <p>测试计划将用例组织起来，并生成可分配的执行任务，是串联用例与执行的核心枢纽。</p>
+
+      <div class="doc-screenshot">
+        <div class="ss-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ss-url">测试计划</span></div>
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/04_test_plans.png" alt="测试计划" loading="lazy"/>
+      </div>
+
+      <h3>完整操作流程</h3>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="fs-num">1</div>
+          <div class="fs-body"><strong>新建计划</strong>填写名称、关联项目、版本、起止日期</div>
+        </div>
+        <div class="flow-arrow-v">↓</div>
+        <div class="flow-step">
+          <div class="fs-num">2</div>
+          <div class="fs-body"><strong>添加用例</strong>从用例库中选择用例，可按模块分组</div>
+        </div>
+        <div class="flow-arrow-v">↓</div>
+        <div class="flow-step">
+          <div class="fs-num">3</div>
+          <div class="fs-body"><strong>生成任务</strong>点击「生成执行任务」，选择执行人，批量创建</div>
+        </div>
+        <div class="flow-arrow-v">↓</div>
+        <div class="flow-step">
+          <div class="fs-num">4</div>
+          <div class="fs-body"><strong>跟踪进度</strong>计划详情页查看所有关联任务及整体通过率</div>
+        </div>
+      </div>
+
+      <h3>计划状态</h3>
+      <div class="status-row">
+        <span class="status-badge gray">草稿</span>
+        <span class="arrow">→</span>
+        <span class="status-badge blue">进行中</span>
+        <span class="arrow">→</span>
+        <span class="status-badge green">已完成</span>
+        <span class="divider">|</span>
+        <span class="status-badge red">已逾期</span>
+        <span class="status-note">（系统自动判断，到达结束日期未完成时触发）</span>
+      </div>
+    </section>
+
+    <!-- ── 5. 测试用例 ──────────────────────────────── -->
+    <section class="doc-section" id="s-case">
+      <div class="section-label">05</div>
+      <h2>测试用例</h2>
+      <p>测试用例是核心资产，支持树形模块管理与 Excel 批量操作。</p>
+
+      <div class="doc-screenshot">
+        <div class="ss-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ss-url">测试用例</span></div>
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/05_test_cases.png" alt="测试用例" loading="lazy"/>
+      </div>
+
+      <h3>模块树操作</h3>
+      <ol class="step-list">
+        <li>左侧模块树：右键可新增子模块、重命名、删除</li>
+        <li>点击某个模块，右侧表格只展示该模块下的用例</li>
+        <li>点击「全部」可查看所有模块的用例</li>
+      </ol>
+
+      <h3>新建用例字段说明</h3>
+      <table class="doc-table">
+        <thead><tr><th>字段</th><th>说明</th><th>必填</th></tr></thead>
+        <tbody>
+          <tr><td>标题</td><td>用例名称，简洁描述测试目标</td><td>✅</td></tr>
+          <tr><td>所属模块</td><td>归属的模块节点</td><td>✅</td></tr>
+          <tr><td>优先级</td><td>P0（最高）/ P1 / P2 / P3</td><td>✅</td></tr>
+          <tr><td>类型</td><td>功能 / 性能 / 接口 / 安全</td><td>✅</td></tr>
+          <tr><td>前置条件</td><td>执行该用例前需满足的环境或状态</td><td>—</td></tr>
+          <tr><td>测试步骤</td><td>详细操作步骤，支持附件/图片上传</td><td>—</td></tr>
+          <tr><td>预期结果</td><td>每步操作的预期输出</td><td>—</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Excel 批量导入导出</h3>
+      <div class="card-grid cols-2">
+        <div class="info-card">
+          <div class="ic-icon" style="background:#f0fdf4;color:#16a34a">📥</div>
+          <div class="ic-body">
+            <strong>批量导入</strong>
+            <p>① 点击「导入」→ 下载模板<br/>② 按模板填写用例数据<br/>③ 上传文件，系统逐行反馈成功/失败及原因</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#eff6ff;color:#2563eb">📤</div>
+          <div class="ic-body">
+            <strong>批量导出</strong>
+            <p>按当前筛选条件（模块、优先级、关键字）导出为标准 Excel 文件</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6. 测试执行 ──────────────────────────────── -->
+    <section class="doc-section" id="s-task">
+      <div class="section-label">06</div>
+      <h2>测试执行</h2>
+      <p>测试任务由测试计划生成，每个任务包含一批待执行的用例。执行人按任务逐条记录结果。</p>
+
+      <div class="doc-screenshot">
+        <div class="ss-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ss-url">测试执行</span></div>
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/06_test_tasks.png" alt="测试执行" loading="lazy"/>
+      </div>
+
+      <h3>执行结果说明</h3>
+      <div class="result-grid">
+        <div class="result-item green"><span>✅</span><div><strong>通过</strong><p>用例执行符合预期</p></div></div>
+        <div class="result-item red"><span>❌</span><div><strong>失败</strong><p>执行结果与预期不符，可直接关联提交缺陷</p></div></div>
+        <div class="result-item gray"><span>⏭️</span><div><strong>跳过</strong><p>因某些原因本次不执行</p></div></div>
+        <div class="result-item orange"><span>🚫</span><div><strong>阻塞</strong><p>前置条件未满足，无法执行</p></div></div>
+      </div>
+
+      <h3>操作步骤</h3>
+      <ol class="step-list">
+        <li>打开任务，顶部进度条展示实时通过率</li>
+        <li>点击每条用例旁的状态按钮记录执行结果</li>
+        <li>可填写执行备注，上传附件截图作为执行证据</li>
+        <li>结果为「失败」时，点击「提交缺陷」直接关联创建缺陷</li>
+        <li>所有用例执行完毕后，任务状态自动变更为「已完成」</li>
+      </ol>
+    </section>
+
+    <!-- ── 7. 缺陷管理 ──────────────────────────────── -->
+    <section class="doc-section" id="s-defect">
+      <div class="section-label">07</div>
+      <h2>缺陷管理</h2>
+      <p>缺陷管理是问天台的核心模块，提供三种视图满足不同场景的使用需求，右上角可随时切换。</p>
+
+      <!-- 三视图 Tab -->
+      <div class="view-tabs">
+        <button class="vtab active" data-view="list">📋 列表视图</button>
+        <button class="vtab" data-view="kanban">🗂️ 看板视图</button>
+        <button class="vtab" data-view="gantt">📊 甘特图视图</button>
+      </div>
+
+      <!-- 列表视图 -->
+      <div class="view-panel active" id="view-list">
+        <div class="doc-screenshot">
+          <div class="ss-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ss-url">缺陷管理 · 列表视图</span></div>
+          <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/07_defects_list.png" alt="缺陷列表视图" loading="lazy"/>
+        </div>
+        <div class="view-desc" id="s-defect-list">
+          <h3>列表视图</h3>
+          <p>以表格形式展示所有缺陷，适合批量查阅、筛选与管理。</p>
+          <div class="feature-tags">
+            <span class="ftag">多字段筛选（状态/严重程度/优先级/处理人）</span>
+            <span class="ftag">关键字搜索</span>
+            <span class="ftag">点击行展开详情</span>
+            <span class="ftag">快速变更状态</span>
+            <span class="ftag">批量操作</span>
+          </div>
+          <table class="doc-table" style="margin-top:16px">
+            <thead><tr><th>字段</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr><td>严重程度</td><td>P0（致命）/ P1（严重）/ P2（一般）/ P3（轻微）</td></tr>
+              <tr><td>优先级</td><td>紧急 / 高 / 中 / 低</td></tr>
+              <tr><td>状态</td><td>新建 / 已指派 / 修复中 / 待验证 / 已关闭 / 已拒绝 / 重新打开</td></tr>
+              <tr><td>分类标签</td><td>自定义颜色标签，支持多选</td></tr>
+              <tr><td>计划时间</td><td>计划开始日期、计划结束日期、预计工时</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 看板视图 -->
+      <div class="view-panel" id="view-kanban">
+        <div class="doc-screenshot">
+          <div class="ss-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ss-url">缺陷管理 · 看板视图</span></div>
+          <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/08_defects_kanban.png" alt="缺陷看板视图" loading="lazy"/>
+        </div>
+        <div class="view-desc" id="s-defect-kanban">
+          <h3>看板视图</h3>
+          <p>以泳道卡片形式展示缺陷，按状态分为 7 列，直观反映各阶段缺陷分布。</p>
+          <div class="kanban-cols">
+            <div class="kc-item" style="border-color:#94a3b8"><span style="color:#64748b">新建</span></div>
+            <div class="kc-item" style="border-color:#60a5fa"><span style="color:#2563eb">已指派</span></div>
+            <div class="kc-item" style="border-color:#f97316"><span style="color:#ea580c">修复中</span></div>
+            <div class="kc-item" style="border-color:#a78bfa"><span style="color:#7c3aed">待验证</span></div>
+            <div class="kc-item" style="border-color:#34d399"><span style="color:#059669">已关闭</span></div>
+            <div class="kc-item" style="border-color:#f87171"><span style="color:#dc2626">已拒绝</span></div>
+            <div class="kc-item" style="border-color:#fbbf24"><span style="color:#d97706">重新打开</span></div>
+          </div>
+          <div class="feature-tags" style="margin-top:14px">
+            <span class="ftag">卡片展示严重程度、优先级、分类标签</span>
+            <span class="ftag">卡片展示计划时间</span>
+            <span class="ftag">点击卡片查看完整详情</span>
+          </div>
+          <div class="info-box box-blue" style="margin-top:14px">
+            每列标题旁显示该状态下的缺陷数量，便于快速了解各阶段积压情况。
+          </div>
+        </div>
+      </div>
+
+      <!-- 甘特图视图 -->
+      <div class="view-panel" id="view-gantt">
+        <div class="doc-screenshot">
+          <div class="ss-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ss-url">缺陷管理 · 甘特图视图</span></div>
+          <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/09_defects_gantt.png" alt="缺陷甘特图视图" loading="lazy"/>
+        </div>
+        <div class="view-desc" id="s-defect-gantt">
+          <h3>甘特图视图</h3>
+          <p>以处理人为泳道，按时间轴展示缺陷的计划修复区间，适合排期规划与工期评估。</p>
+          <div class="card-grid cols-2" style="margin-top:14px">
+            <div class="info-card">
+              <div class="ic-icon" style="background:#fef2f2;color:#dc2626">🎨</div>
+              <div class="ic-body">
+                <strong>颜色编码</strong>
+                <p>条形颜色对应缺陷严重程度：红色（P0）→ 橙色（P1）→ 黄色（P2）→ 绿色（P3）</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="ic-icon" style="background:#eff6ff;color:#2563eb">📐</div>
+              <div class="ic-body">
+                <strong>特殊标记</strong>
+                <p>今日竖线标记当前日期，灰色背景标记周末，便于排期参考</p>
+              </div>
+            </div>
+          </div>
+          <div class="info-box box-warn" style="margin-top:14px">
+            <strong>前提：</strong>甘特图只展示填写了「计划开始日期」或「计划结束日期」的缺陷条目。未填写时间的缺陷不会出现在此视图。
+          </div>
+        </div>
+      </div>
+
+      <!-- 缺陷状态流转 -->
+      <h3 style="margin-top:32px">状态流转规则</h3>
+      <div class="state-machine">
+        <div class="sm-row">
+          <div class="sm-node new">新建</div>
+          <div class="sm-arrow">→</div>
+          <div class="sm-node assigned">已指派</div>
+          <div class="sm-arrow">→</div>
+          <div class="sm-node fixing">修复中</div>
+          <div class="sm-arrow">→</div>
+          <div class="sm-node pending">待验证</div>
+          <div class="sm-arrow">→</div>
+          <div class="sm-node closed">已关闭</div>
+        </div>
+        <div class="sm-branches">
+          <div class="sm-branch">
+            <div class="sm-branch-line"></div>
+            <div class="sm-branch-nodes">
+              <div class="sm-node rejected">已拒绝</div>
+              <span class="sm-branch-note">（处理人认为非缺陷时拒绝）</span>
+            </div>
+          </div>
+          <div class="sm-branch">
+            <div class="sm-branch-line"></div>
+            <div class="sm-branch-nodes">
+              <div class="sm-node reopened">重新打开</div>
+              <span class="sm-branch-note">（验证不通过时退回修复）</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box box-blue" style="margin-top:16px">
+        状态变更和缺陷指派操作会自动触发<strong>站内消息通知</strong>，相关人员可在右上角铃铛图标处查看未读消息。
+      </div>
+
+      <h3>操作日志 & 评论</h3>
+      <p>缺陷详情页底部记录每次字段变更与状态流转的完整日志，支持<strong>嵌套回复评论</strong>，方便团队沟通协作。</p>
+    </section>
+
+    <!-- ── 8. 测试报告 ──────────────────────────────── -->
+    <section class="doc-section" id="s-report">
+      <div class="section-label">08</div>
+      <h2>测试报告</h2>
+      <p>基于测试计划一键生成正式测试报告，包含多维度质量数据分析，支持对外分享。</p>
+
+      <div class="doc-screenshot">
+        <div class="ss-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ss-url">测试报告</span></div>
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/10_reports.png" alt="测试报告" loading="lazy"/>
+      </div>
+
+      <h3>生成步骤</h3>
+      <ol class="step-list">
+        <li>进入测试计划详情页</li>
+        <li>点击右上角「生成报告」按钮</li>
+        <li>报告自动统计并跳转至报告详情</li>
+      </ol>
+
+      <h3>报告内容</h3>
+      <div class="card-grid cols-3">
+        <div class="info-card">
+          <div class="ic-icon" style="background:#fff3ea;color:#ff6a00">📊</div>
+          <div class="ic-body"><strong>KPI 摘要</strong><p>总用例数、通过/失败数、通过率、缺陷数、任务数</p></div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#f0fdf4;color:#16a34a">🍩</div>
+          <div class="ic-body"><strong>缺陷分布</strong><p>严重程度分布、状态分布、分类分布饼图</p></div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#eff6ff;color:#2563eb">📈</div>
+          <div class="ic-body"><strong>趋势分析</strong><p>近 30 天缺陷新增趋势折线图</p></div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#fdf4ff;color:#9333ea">🏆</div>
+          <div class="ic-body"><strong>处理人排行</strong><p>按缺陷处理数量排名展示</p></div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#fef2f2;color:#dc2626">🔗</div>
+          <div class="ic-body"><strong>公开分享</strong><p>生成无需登录即可访问的分享链接</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 9. 系统管理 ──────────────────────────────── -->
+    <section class="doc-section" id="s-system">
+      <div class="section-label">09</div>
+      <h2>系统管理</h2>
+      <p>仅管理员可见，包含用户、角色、权限三个子模块，管理系统的访问控制体系。</p>
+
+      <div class="doc-screenshot">
+        <div class="ss-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ss-url">系统管理 · 用户管理</span></div>
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/11_system_users.png" alt="系统管理" loading="lazy"/>
+      </div>
+
+      <div class="card-grid cols-3" style="margin-top:20px">
+        <div class="info-card">
+          <div class="ic-icon" style="background:#fff3ea;color:#ff6a00">👤</div>
+          <div class="ic-body">
+            <strong>用户管理</strong>
+            <p>创建/编辑/禁用用户<br/>重置用户密码<br/>为用户分配角色</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#f0fdf4;color:#16a34a">🏷️</div>
+          <div class="ic-body">
+            <strong>角色管理</strong>
+            <p>创建角色，配置数据权限<br/>为角色绑定功能权限树</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#eff6ff;color:#2563eb">🔑</div>
+          <div class="ic-body">
+            <strong>权限管理</strong>
+            <p>树形结构管理<br/>菜单与按钮级权限<br/>支持增删改层级</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>数据权限说明</h3>
+      <table class="doc-table">
+        <thead><tr><th>权限类型</th><th>可见范围</th><th>适用角色</th></tr></thead>
+        <tbody>
+          <tr><td><span class="badge-orange">全部数据</span></td><td>可查看系统内所有项目、缺陷、用例等数据</td><td>管理员、项目负责人</td></tr>
+          <tr><td><span class="badge-blue">个人参与</span></td><td>只能查看自己被添加为成员的项目及相关数据</td><td>普通测试工程师</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── 10. 消息通知 ──────────────────────────────── -->
+    <section class="doc-section" id="s-notify">
+      <div class="section-label">10</div>
+      <h2>消息通知</h2>
+      <p>问天台内置站内消息系统，关键操作自动触发通知，确保团队成员及时响应。</p>
+
+      <h3>触发通知的操作</h3>
+      <div class="notify-list">
+        <div class="notify-item"><span class="n-icon">🐛</span><div><strong>缺陷指派</strong> — 被指派为处理人时收到通知</div></div>
+        <div class="notify-item"><span class="n-icon">🔄</span><div><strong>状态变更</strong> — 缺陷状态发生变化时通知相关人员</div></div>
+        <div class="notify-item"><span class="n-icon">💬</span><div><strong>缺陷评论</strong> — 有人在你参与的缺陷下评论时通知</div></div>
+      </div>
+
+      <h3>查看通知</h3>
+      <ol class="step-list">
+        <li>点击右上角铃铛图标，右侧弹出通知抽屉</li>
+        <li>未读消息数以红色角标显示</li>
+        <li>点击通知条目可直接跳转至对应缺陷详情页</li>
+        <li>点击「全部已读」可批量标记</li>
+      </ol>
+    </section>
+
+    <!-- 文档底部导航 -->
+    <div class="doc-footer-nav">
+      <a href="index.html" class="dfn-btn">← 返回官网首页</a>
+      <a href="https://github.com/lihuacheng/tqms" target="_blank" class="dfn-btn primary">GitHub 源码 →</a>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/manual.js"></script>
+</body>
+</html>
