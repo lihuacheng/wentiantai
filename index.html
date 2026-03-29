@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>问天台 · 测试质量管理平台</title>
+  <meta name="description" content="问天台 —— 以屈子之问，守软件质量之门。面向软件研发团队的全流程测试质量管理平台。" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ══ 导航栏 ══════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="images/logo.svg" alt="问天台" width="32" height="32" />
+      <span class="nav-brand">问天台</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features">功能</a></li>
+      <li><a href="#screenshots">截图</a></li>
+      <li><a href="#stack">技术栈</a></li>
+      <li><a href="#quickstart">快速开始</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="https://github.com/lihuacheng/tqms" target="_blank" class="btn btn-ghost">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="https://github.com/lihuacheng/tqms/archive/refs/heads/main.zip" class="btn btn-primary">下载源码</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ HERO ════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-badge reveal">
+      <span class="badge-dot"></span>开源 · 免费 · 全流程
+    </div>
+    <h1 class="hero-title reveal">
+      <span class="title-zh">问天台</span>
+      <span class="title-en">WenTian · Test Quality Platform</span>
+    </h1>
+    <p class="hero-quote reveal">
+      <em>"遂古之初，谁传道之？上下未形，何由考之？"</em>
+      <span>—— 屈原《天问》</span>
+    </p>
+    <p class="hero-desc reveal">
+      战国屈原被流放，仰天追问万象本源，此乃"问天"之名由来。<br/>
+      测试亦是不断追问：<strong>为何出错？边界何在？逻辑是否自洽？</strong><br/>
+      问天台，以屈子之问，守软件质量之门。
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#quickstart" class="btn btn-primary btn-lg">快速开始</a>
+      <a href="https://github.com/lihuacheng/tqms" target="_blank" class="btn btn-outline btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        查看源码
+      </a>
+    </div>
+    <div class="hero-screenshot reveal">
+      <div class="screenshot-frame">
+        <div class="frame-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="frame-url">localhost:5173</span>
+        </div>
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/01_login.png"
+             alt="问天台登录页" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 数据统计 ══════════════════════════════════════════ -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-num">11+</div>
+      <div class="stat-label">核心功能模块</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num">3</div>
+      <div class="stat-label">缺陷视图（列表/看板/甘特）</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num">Java 8</div>
+      <div class="stat-label">低版本兼容</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num">MIT</div>
+      <div class="stat-label">开源协议</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 功能特性 ══════════════════════════════════════════ -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">功能特性</span>
+      <h2>全流程测试质量管理</h2>
+      <p>覆盖测试生命周期每个环节，从计划到报告，一站式管理</p>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-card reveal">
+        <div class="feature-icon" style="background:#fff3ea;color:#ff6a00">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9,16 11,18 15,14"/></svg>
+        </div>
+        <h3>测试计划</h3>
+        <p>创建与管理测试计划，关联项目版本，计划内用例分组，一键生成执行任务并批量分配。</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon" style="background:#f0fdf4;color:#16a34a">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><polyline points="9,15 11,17 15,13"/></svg>
+        </div>
+        <h3>测试用例</h3>
+        <p>多级模块树形结构，完整用例字段，支持 Excel 批量导入导出，关键字与条件筛选。</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon" style="background:#eff6ff;color:#2563eb">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+        </div>
+        <h3>测试执行</h3>
+        <p>逐条记录执行结果（通过/失败/跳过/阻塞），实时统计通过率，失败时直接关联提交缺陷。</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon" style="background:#fef2f2;color:#dc2626">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h3>缺陷管理</h3>
+        <p>三种视图（列表/看板/甘特图），完整状态机流转，自动通知，操作日志，嵌套评论。</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon" style="background:#fdf4ff;color:#9333ea">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3>测试报告</h3>
+        <p>基于计划一键生成，多维度缺陷分析，支持公开分享链接（无需登录即可查看）。</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon" style="background:#fff7ed;color:#ea580c">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>权限管理</h3>
+        <p>RBAC 模型，菜单与按钮级权限控制，数据权限（全量/个人参与），JWT 无感刷新。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 界面截图 ══════════════════════════════════════════ -->
+<section class="screenshots" id="screenshots">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">界面截图</span>
+      <h2>简洁优雅的操作界面</h2>
+      <p>橙色主题，亮色/暗色双模式，顶部导航 + 二级侧边栏布局</p>
+    </div>
+
+    <div class="screenshot-tabs reveal">
+      <button class="tab-btn active" data-tab="0">仪表盘</button>
+      <button class="tab-btn" data-tab="1">缺陷看板</button>
+      <button class="tab-btn" data-tab="2">缺陷甘特图</button>
+      <button class="tab-btn" data-tab="3">测试报告</button>
+      <button class="tab-btn" data-tab="4">系统管理</button>
+    </div>
+
+    <div class="screenshot-viewer reveal">
+      <div class="viewer-frame">
+        <div class="frame-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="frame-url" id="frameUrl">仪表盘</span>
+        </div>
+        <img id="screenshotImg"
+          src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/02_dashboard.png"
+          alt="仪表盘" />
+      </div>
+    </div>
+
+    <div class="screenshot-thumbs reveal">
+      <div class="thumb active" data-src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/02_dashboard.png" data-label="仪表盘">
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/02_dashboard.png" alt="仪表盘" loading="lazy"/>
+      </div>
+      <div class="thumb" data-src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/08_defects_kanban.png" data-label="缺陷看板">
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/08_defects_kanban.png" alt="缺陷看板" loading="lazy"/>
+      </div>
+      <div class="thumb" data-src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/09_defects_gantt.png" data-label="缺陷甘特图">
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/09_defects_gantt.png" alt="缺陷甘特图" loading="lazy"/>
+      </div>
+      <div class="thumb" data-src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/10_reports.png" data-label="测试报告">
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/10_reports.png" alt="测试报告" loading="lazy"/>
+      </div>
+      <div class="thumb" data-src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/11_system_users.png" data-label="系统管理">
+        <img src="https://raw.githubusercontent.com/lihuacheng/tqms/main/docs/screenshots/11_system_users.png" alt="系统管理" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 技术栈 ════════════════════════════════════════════ -->
+<section class="stack" id="stack">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">技术栈</span>
+      <h2>主流技术，开箱即用</h2>
+      <p>前后端分离架构，Java 8 兼容，两套前端可按需选择</p>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-group reveal">
+        <h3 class="stack-group-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          后端
+        </h3>
+        <div class="stack-items">
+          <span class="stack-badge">Java 8</span>
+          <span class="stack-badge">Spring Boot 2.7</span>
+          <span class="stack-badge">Spring Security</span>
+          <span class="stack-badge">MyBatis-Plus</span>
+          <span class="stack-badge">MySQL 8.0</span>
+          <span class="stack-badge">JWT</span>
+          <span class="stack-badge">EasyExcel</span>
+          <span class="stack-badge">Knife4j</span>
+          <span class="stack-badge">Hutool</span>
+        </div>
+      </div>
+      <div class="stack-group reveal">
+        <h3 class="stack-group-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12,2 2,7 12,12 22,7"/><polyline points="2,17 12,22 22,17"/><polyline points="2,12 12,17 22,12"/></svg>
+          Vue 前端（主）
+        </h3>
+        <div class="stack-items">
+          <span class="stack-badge green">Vue 3.4</span>
+          <span class="stack-badge green">Vue Router 4</span>
+          <span class="stack-badge green">Pinia</span>
+          <span class="stack-badge green">Element Plus</span>
+          <span class="stack-badge green">Axios</span>
+          <span class="stack-badge green">Vite 5</span>
+        </div>
+      </div>
+      <div class="stack-group reveal">
+        <h3 class="stack-group-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          React 前端（备用）
+        </h3>
+        <div class="stack-items">
+          <span class="stack-badge blue">React 18</span>
+          <span class="stack-badge blue">React Router 6</span>
+          <span class="stack-badge blue">Zustand</span>
+          <span class="stack-badge blue">Ant Design 5</span>
+          <span class="stack-badge blue">Axios</span>
+          <span class="stack-badge blue">Vite 5</span>
+        </div>
+      </div>
+      <div class="stack-group reveal">
+        <h3 class="stack-group-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          部署
+        </h3>
+        <div class="stack-items">
+          <span class="stack-badge purple">Docker</span>
+          <span class="stack-badge purple">Docker Compose</span>
+          <span class="stack-badge purple">Nginx</span>
+          <span class="stack-badge purple">多阶段构建</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 快速开始 ══════════════════════════════════════════ -->
+<section class="quickstart" id="quickstart">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">快速开始</span>
+      <h2>三分钟启动</h2>
+      <p>Docker 一键部署，无需配置繁琐环境</p>
+    </div>
+    <div class="steps">
+
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>克隆仓库</h3>
+          <div class="code-block">
+            <div class="code-header">
+              <span>bash</span>
+              <button class="copy-btn" data-code="git clone https://github.com/lihuacheng/tqms.git&#10;cd tqms">复制</button>
+            </div>
+            <pre><code>git clone https://github.com/lihuacheng/tqms.git
+cd tqms</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Docker 一键启动</h3>
+          <div class="code-block">
+            <div class="code-header">
+              <span>bash</span>
+              <button class="copy-btn" data-code="docker compose up -d">复制</button>
+            </div>
+            <pre><code>docker compose up -d</code></pre>
+          </div>
+          <p class="step-note">首次启动需构建镜像，约 3～5 分钟。</p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>访问系统</h3>
+          <div class="access-grid">
+            <a href="http://localhost:3000" target="_blank" class="access-card">
+              <span class="access-icon">🌐</span>
+              <span class="access-label">Vue 前端</span>
+              <span class="access-url">localhost:3000</span>
+            </a>
+            <a href="http://localhost:5174" target="_blank" class="access-card">
+              <span class="access-icon">⚛️</span>
+              <span class="access-label">React 前端</span>
+              <span class="access-url">localhost:5174</span>
+            </a>
+            <a href="http://localhost:8080/doc.html" target="_blank" class="access-card">
+              <span class="access-icon">📖</span>
+              <span class="access-label">API 文档</span>
+              <span class="access-url">localhost:8080/doc.html</span>
+            </a>
+          </div>
+          <div class="default-account">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+            默认账号：<code>admin</code> &nbsp;/&nbsp; 密码：<code>Admin@123</code>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 典故 CTA ══════════════════════════════════════════ -->
+<section class="lore-cta">
+  <div class="container lore-inner">
+    <div class="lore-left reveal">
+      <div class="lore-icon">問</div>
+    </div>
+    <div class="lore-right reveal">
+      <blockquote>
+        "遂古之初，谁传道之？<br/>上下未形，何由考之？"
+      </blockquote>
+      <p>
+        屈原以一百七十余问，叩问天地本源。<br/>
+        测试工程师以无数追问，叩问软件质量。<br/>
+        <strong>问天台，因问而生，为质量而战。</strong>
+      </p>
+      <a href="https://github.com/lihuacheng/tqms" target="_blank" class="btn btn-primary btn-lg">
+        在 GitHub 上给我们 Star ⭐
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 页脚 ════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">
+      <img src="images/logo.svg" alt="问天台" width="28" height="28" />
+      <span>问天台</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/lihuacheng/tqms" target="_blank">GitHub</a>
+      <a href="https://github.com/lihuacheng/tqms/issues" target="_blank">Issues</a>
+      <a href="https://github.com/lihuacheng/tqms/blob/main/README.md" target="_blank">文档</a>
+      <a href="https://github.com/lihuacheng/tqms/blob/main/LICENSE" target="_blank">MIT License</a>
+    </div>
+    <div class="footer-copy">
+      © 2025 问天台 · WenTian Test Quality Platform · MIT License
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
