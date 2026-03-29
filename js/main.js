@@ -97,6 +97,23 @@ navToggle.addEventListener('click', () => {
   if (open) navLinks.removeAttribute('style')
 })
 
+/* ══ 使用说明目录高亮 ══════════════════════════════ */
+const tocLinks = document.querySelectorAll('.toc-link')
+const manualSections = document.querySelectorAll('.manual-section')
+
+if (manualSections.length) {
+  const tocObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'))
+        const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`)
+        if (active) active.classList.add('active')
+      }
+    })
+  }, { rootMargin: '-20% 0px -70% 0px' })
+  manualSections.forEach(s => tocObserver.observe(s))
+}
+
 /* ══ 平滑锚点（补偿导航栏高度）══════════════════ */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
