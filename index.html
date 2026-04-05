@@ -19,6 +19,8 @@
     </a>
     <ul class="nav-links">
       <li><a href="#features">功能</a></li>
+      <li><a href="#capabilities">扩展</a></li>
+      <li><a href="#roadmap">路线图</a></li>
       <li><a href="#screenshots">截图</a></li>
       <li><a href="#stack">技术栈</a></li>
       <li><a href="#quickstart">快速开始</a></li>
@@ -163,6 +165,167 @@
         <p>RBAC 模型，菜单与按钮级权限控制，数据权限（全量/个人参与），JWT 无感刷新。</p>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ══ 平台扩展能力 ══════════════════════════════════════ -->
+<section class="capabilities" id="capabilities">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">平台扩展</span>
+      <h2>从测试管理走向质量平台</h2>
+      <p>围绕自动化、发布门禁、需求追踪、外部协同与 AI 辅助，逐步把问天台扩展为团队质量中枢</p>
+    </div>
+
+    <div class="capability-grid">
+      <article class="capability-card capability-card-priority reveal">
+        <div class="capability-top">
+          <span class="capability-badge">优先落地</span>
+          <span class="capability-meta">Quality Ops</span>
+        </div>
+        <h3>自动化测试接入</h3>
+        <p>对接 Jenkins、GitHub Actions、GitLab CI，回收 JUnit / Allure / 自定义 JSON 结果，把自动化执行和手工测试统一归档到版本、计划与报告。</p>
+        <ul class="capability-points">
+          <li>自动同步构建结果、通过率、失败明细</li>
+          <li>将自动化用例映射到测试计划与版本</li>
+          <li>失败任务可直接触发缺陷建议单</li>
+        </ul>
+      </article>
+
+      <article class="capability-card reveal">
+        <div class="capability-top">
+          <span class="capability-badge capability-badge-soft">优先落地</span>
+          <span class="capability-meta">Release Gate</span>
+        </div>
+        <h3>发布质量门禁</h3>
+        <p>基于通过率、阻塞缺陷数、P0/P1 未关闭数、回归完成度等指标自动生成发布结论，减少靠经验拍板的风险。</p>
+        <ul class="capability-points">
+          <li>可配置门禁规则与阈值</li>
+          <li>支持版本、环境、项目维度判定</li>
+          <li>生成可分享的发布风险摘要</li>
+        </ul>
+      </article>
+
+      <article class="capability-card reveal">
+        <div class="capability-top">
+          <span class="capability-badge capability-badge-soft">优先落地</span>
+          <span class="capability-meta">Traceability</span>
+        </div>
+        <h3>需求追踪矩阵</h3>
+        <p>补齐“需求 → 用例 → 执行 → 缺陷 → 发布”全链路关系，支持研发、测试、产品在一个界面追溯质量状态。</p>
+        <ul class="capability-points">
+          <li>需求覆盖率与回归覆盖率实时可见</li>
+          <li>定位未覆盖需求与高风险需求</li>
+          <li>支持版本回溯与变更影响分析</li>
+        </ul>
+      </article>
+
+      <article class="capability-card reveal">
+        <div class="capability-top">
+          <span class="capability-badge capability-badge-plain">中期增强</span>
+          <span class="capability-meta">Workflow</span>
+        </div>
+        <h3>可配置工作流</h3>
+        <p>把缺陷状态流、字段规则、审批节点、SLA 升级为可配置能力，支持不同团队按流程模板治理质量。</p>
+        <ul class="capability-points">
+          <li>自定义缺陷流转与字段必填规则</li>
+          <li>支持审批流、超时提醒、升级通知</li>
+          <li>按项目或组织应用流程模板</li>
+        </ul>
+      </article>
+
+      <article class="capability-card reveal">
+        <div class="capability-top">
+          <span class="capability-badge capability-badge-plain">中期增强</span>
+          <span class="capability-meta">Integration</span>
+        </div>
+        <h3>外部协同集成</h3>
+        <p>与飞书、钉钉、Jira、TAPD、禅道、Webhook 打通，把测试质量数据融入研发协同流程，而不是停留在孤岛系统里。</p>
+        <ul class="capability-points">
+          <li>缺陷状态变更自动通知到群聊</li>
+          <li>支持双向同步外部任务与缺陷</li>
+          <li>开放 API 便于生态接入</li>
+        </ul>
+      </article>
+
+      <article class="capability-card reveal">
+        <div class="capability-top">
+          <span class="capability-badge capability-badge-plain">高阶能力</span>
+          <span class="capability-meta">AI Assist</span>
+        </div>
+        <h3>AI 测试助手</h3>
+        <p>结合需求文档、接口描述与历史缺陷，辅助生成测试点、用例草稿、报告摘要和缺陷去重建议，让质量活动更快进入可执行状态。</p>
+        <ul class="capability-points">
+          <li>根据 PRD / API 自动生成测试点</li>
+          <li>报告自动总结风险与异常趋势</li>
+          <li>缺陷去重与相似问题提示</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 产品路线图 ════════════════════════════════════════ -->
+<section class="roadmap" id="roadmap">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">产品路线图</span>
+      <h2>按 1 个月 / 3 个月 / 6 个月推进</h2>
+      <p>先抓最容易形成平台差异化的能力，再逐步扩展到协同、智能与组织级治理</p>
+    </div>
+
+    <div class="roadmap-highlight reveal">
+      <span class="roadmap-highlight-label">推荐优先级</span>
+      <strong>自动化测试接入</strong>
+      <span>/</span>
+      <strong>发布质量门禁</strong>
+      <span>/</span>
+      <strong>需求追踪矩阵</strong>
+    </div>
+
+    <div class="roadmap-grid">
+      <article class="roadmap-card reveal">
+        <div class="roadmap-head">
+          <span class="roadmap-phase">1 个月</span>
+          <span class="roadmap-goal">打通核心质量数据</span>
+        </div>
+        <h3>把平台从手工测试工具升级为质量看板</h3>
+        <ul class="roadmap-list">
+          <li>接入 Jenkins / GitHub Actions 执行结果</li>
+          <li>建立版本级质量门禁规则与结果页</li>
+          <li>补需求、用例、执行、缺陷的追踪关系</li>
+          <li>在报告页增加发布结论与风险摘要</li>
+        </ul>
+      </article>
+
+      <article class="roadmap-card reveal">
+        <div class="roadmap-head">
+          <span class="roadmap-phase">3 个月</span>
+          <span class="roadmap-goal">提升团队协同效率</span>
+        </div>
+        <h3>把质量流程做成可配置、可协同、可追责</h3>
+        <ul class="roadmap-list">
+          <li>落地缺陷工作流、审批流与 SLA 规则</li>
+          <li>对接飞书、钉钉、Webhook、Jira / TAPD</li>
+          <li>上线需求覆盖率、缺陷逃逸率、修复时长分析</li>
+          <li>补充组织级审计日志与操作留痕</li>
+        </ul>
+      </article>
+
+      <article class="roadmap-card reveal">
+        <div class="roadmap-head">
+          <span class="roadmap-phase">6 个月</span>
+          <span class="roadmap-goal">形成平台级壁垒</span>
+        </div>
+        <h3>把问天台推进到组织级质量中枢</h3>
+        <ul class="roadmap-list">
+          <li>上线 AI 测试点生成、报告总结、缺陷去重</li>
+          <li>支持 SSO / LDAP、多租户与开放插件机制</li>
+          <li>沉淀对象存储、备份归档、长期趋势分析</li>
+          <li>构建统一质量数据 API 与生态接入能力</li>
+        </ul>
+      </article>
     </div>
   </div>
 </section>
