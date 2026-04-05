@@ -82,6 +82,10 @@
       <li><a href="#s-notify" class="nav-link">
         <span class="nav-icon">🔔</span>消息通知
       </a></li>
+      <li class="nav-group-title">质量保障</li>
+      <li><a href="#s-testing-baseline" class="nav-link">
+        <span class="nav-icon">🧪</span>测试用例基线
+      </a></li>
     </ul>
     <div class="sidebar-footer">
       <a href="index.html" class="back-link">← 返回官网</a>
@@ -103,6 +107,7 @@
         <span>📦 适用版本：v1.0+</span>
         <span>🧑‍💻 适用角色：管理员 · 测试工程师 · 开发工程师</span>
         <span>🕐 预计阅读：15 分钟</span>
+        <span>🧪 配套资料：代码对齐版测试用例基线</span>
       </div>
     </div>
 
@@ -137,7 +142,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           安全提示
         </div>
-        连续登录失败 <strong>5 次</strong>后，账号将被自动锁定 <strong>15 分钟</strong>。锁定期间需联系管理员手动解锁或等待时间到期。
+        连续登录失败 <strong>5 次</strong>后，账号将被自动锁定 <strong>15 分钟</strong>。锁定期间需等待锁定到期后再重试。
       </div>
     </section>
 
@@ -283,7 +288,7 @@
           <tr><td>标题</td><td>用例名称，简洁描述测试目标</td><td>✅</td></tr>
           <tr><td>所属模块</td><td>归属的模块节点</td><td>✅</td></tr>
           <tr><td>优先级</td><td>P0（最高）/ P1 / P2 / P3</td><td>✅</td></tr>
-          <tr><td>类型</td><td>功能 / 性能 / 接口 / 安全</td><td>✅</td></tr>
+          <tr><td>类型</td><td>功能 / 接口 / 性能 / UI</td><td>✅</td></tr>
           <tr><td>前置条件</td><td>执行该用例前需满足的环境或状态</td><td>—</td></tr>
           <tr><td>测试步骤</td><td>详细操作步骤，支持附件/图片上传</td><td>—</td></tr>
           <tr><td>预期结果</td><td>每步操作的预期输出</td><td>—</td></tr>
@@ -334,7 +339,7 @@
         <li>点击每条用例旁的状态按钮记录执行结果</li>
         <li>可填写执行备注，上传附件截图作为执行证据</li>
         <li>结果为「失败」时，点击「提交缺陷」直接关联创建缺陷</li>
-        <li>所有用例执行完毕后，任务状态自动变更为「已完成」</li>
+        <li>全部用例执行完成后，可点击「完成任务」将任务标记为已完成</li>
       </ol>
     </section>
 
@@ -473,7 +478,7 @@
       </div>
 
       <div class="info-box box-blue" style="margin-top:16px">
-        状态变更和缺陷指派操作会自动触发<strong>站内消息通知</strong>，相关人员可在右上角铃铛图标处查看未读消息。
+        缺陷<strong>指派</strong>操作会自动触发站内消息通知；状态变更与字段修改会同步写入操作日志，便于追踪责任与处理过程。
       </div>
 
       <h3>操作日志 & 评论</h3>
@@ -577,8 +582,6 @@
       <h3>触发通知的操作</h3>
       <div class="notify-list">
         <div class="notify-item"><span class="n-icon">🐛</span><div><strong>缺陷指派</strong> — 被指派为处理人时收到通知</div></div>
-        <div class="notify-item"><span class="n-icon">🔄</span><div><strong>状态变更</strong> — 缺陷状态发生变化时通知相关人员</div></div>
-        <div class="notify-item"><span class="n-icon">💬</span><div><strong>缺陷评论</strong> — 有人在你参与的缺陷下评论时通知</div></div>
       </div>
 
       <h3>查看通知</h3>
@@ -588,6 +591,66 @@
         <li>点击通知条目可直接跳转至对应缺陷详情页</li>
         <li>点击「全部已读」可批量标记</li>
       </ol>
+    </section>
+
+    <!-- ── 11. 测试用例与回归基线 ───────────────────── -->
+    <section class="doc-section" id="s-testing-baseline">
+      <div class="section-label">11</div>
+      <h2>测试用例与回归基线</h2>
+      <p>除本页操作说明外，主仓库还提供了代码对齐版测试用例文档，可直接用于冒烟回归、联调验证、版本验收和测试资产沉淀。</p>
+
+      <div class="card-grid cols-3">
+        <div class="info-card">
+          <div class="ic-icon" style="background:#fff3ea;color:#ff6a00">P0</div>
+          <div class="ic-body">
+            <strong>主链路优先级</strong>
+            <p>每条用例按 P0-P3 标注优先级，便于发版前快速筛选冒烟集与阻断项。</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#f0fdf4;color:#16a34a">📚</div>
+          <div class="ic-body">
+            <strong>覆盖范围完整</strong>
+            <p>覆盖认证、权限、项目、用例、计划、任务、缺陷、报告、Dashboard、Cockpit、通知、偏好与文件上传。</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="ic-icon" style="background:#eff6ff;color:#2563eb">🔁</div>
+          <div class="ic-body">
+            <strong>回归路径明确</strong>
+            <p>文档内已给出推荐执行顺序、冒烟集和变更影响优先级，适合版本回归与上线验收。</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>推荐执行顺序</h3>
+      <ol class="step-list">
+        <li>认证与权限：登录、会话、用户、角色、权限相关主链路先跑通</li>
+        <li>测试管理：项目、用例库、测试计划、执行任务按业务主流程依次回归</li>
+        <li>质量闭环：缺陷、报告、Dashboard、Cockpit、通知与偏好最后收口验证</li>
+      </ol>
+
+      <h3>建议优先执行的冒烟集</h3>
+      <div class="feature-tags">
+        <span class="ftag">AUTH-001</span>
+        <span class="ftag">PROJ-002</span>
+        <span class="ftag">CASE-006</span>
+        <span class="ftag">PLAN-015</span>
+        <span class="ftag">TASK-007</span>
+        <span class="ftag">DEF-007</span>
+        <span class="ftag">RPT-001</span>
+        <span class="ftag">DASH-001</span>
+      </div>
+
+      <div class="info-box box-blue">
+        测试用例以当前仓库已实现能力为准，执行时建议区分 <strong>UI 行为</strong> 与 <strong>API 行为</strong>，避免把未落地需求误记为缺陷。
+      </div>
+
+      <div class="feature-tags">
+        <a class="ftag" href="https://github.com/lihuacheng/tqms/blob/main/docs/07_%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md" target="_blank" rel="noopener">查看测试用例基线</a>
+        <a class="ftag" href="https://github.com/lihuacheng/tqms/blob/main/docs/06_%E6%B5%8B%E8%AF%95%E6%96%B9%E6%A1%88.md" target="_blank" rel="noopener">查看测试方案</a>
+        <a class="ftag" href="https://github.com/lihuacheng/tqms/blob/main/README.md" target="_blank" rel="noopener">查看项目总览</a>
+      </div>
     </section>
 
     <!-- 文档底部导航 -->

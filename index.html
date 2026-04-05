@@ -319,15 +319,15 @@ cd tqms</code></pre>
         <div class="step-content">
           <h3>访问系统</h3>
           <div class="access-grid">
-            <a href="http://localhost:3000" target="_blank" class="access-card">
+            <a href="http://localhost:3001" target="_blank" class="access-card">
               <span class="access-icon">🌐</span>
               <span class="access-label">Vue 前端</span>
-              <span class="access-url">localhost:3000</span>
+              <span class="access-url">localhost:3001</span>
             </a>
-            <a href="http://localhost:8080/doc.html" target="_blank" class="access-card">
+            <a href="http://localhost:8081/doc.html" target="_blank" class="access-card">
               <span class="access-icon">📖</span>
               <span class="access-label">API 文档</span>
-              <span class="access-url">localhost:8080/doc.html</span>
+              <span class="access-url">localhost:8081/doc.html</span>
             </a>
           </div>
           <div class="default-account">
@@ -345,27 +345,47 @@ cd tqms</code></pre>
 <section class="manual-entry" id="manual">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-tag">使用说明书</span>
-      <h2>完整操作指南</h2>
-      <p>10 个功能模块，手把手带你掌握问天台每一项能力</p>
+      <span class="section-tag">使用文档</span>
+      <h2>说明书与测试基线</h2>
+      <p>官网提供操作指南，同时补充代码对齐版测试用例基线，便于培训、回归与验收</p>
     </div>
-    <div class="manual-entry-card reveal">
-      <div class="me-left">
-        <div class="me-icon">📖</div>
-        <div class="me-info">
-          <h3>问天台 · 使用说明书 v1.0</h3>
-          <p>涵盖登录、仪表盘、项目管理、测试计划、测试用例、测试执行、缺陷管理（列表/看板/甘特三视图）、测试报告、系统管理、消息通知共 10 个完整模块。</p>
-          <div class="me-tags">
-            <span>🔐 登录系统</span><span>📊 仪表盘</span><span>📁 项目管理</span>
-            <span>📅 测试计划</span><span>📋 测试用例</span><span>▶️ 测试执行</span>
-            <span>🐛 缺陷管理</span><span>📈 测试报告</span><span>⚙️ 系统管理</span>
+    <div class="manual-entry-stack">
+      <div class="manual-entry-card reveal">
+        <div class="me-left">
+          <div class="me-icon">📖</div>
+          <div class="me-info">
+            <h3>问天台 · 使用说明书 v1.1</h3>
+            <p>覆盖登录、仪表盘、项目管理、测试计划、测试用例、测试执行、缺陷管理、测试报告、系统管理、消息通知等 11+ 项核心能力，适合产品演示与新成员上手。</p>
+            <div class="me-tags">
+              <span>🔐 登录系统</span><span>📊 仪表盘</span><span>📁 项目管理</span>
+              <span>📅 测试计划</span><span>📋 测试用例</span><span>▶️ 测试执行</span>
+              <span>🐛 缺陷管理</span><span>📈 测试报告</span><span>⚙️ 系统管理</span>
+            </div>
           </div>
         </div>
+        <a href="manual.html" class="me-btn">
+          查看完整说明书
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+        </a>
       </div>
-      <a href="manual.html" class="me-btn">
-        查看完整说明书
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-      </a>
+
+      <div class="manual-entry-card reveal">
+        <div class="me-left">
+          <div class="me-icon">🧪</div>
+          <div class="me-info">
+            <h3>代码对齐版测试用例基线</h3>
+            <p>主仓库已补充完整手工测试用例文档，覆盖认证、权限、项目、用例、计划、任务、缺陷、报告、Dashboard、Cockpit、通知、偏好、文件上传等模块，并按 P0-P3 标注优先级。</p>
+            <div class="me-tags">
+              <span>P0-P3 优先级</span><span>冒烟集</span><span>回归建议</span>
+              <span>UI/API 联调</span><span>代码对齐</span><span>发布验收</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://github.com/lihuacheng/tqms/blob/main/docs/07_%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.md" target="_blank" rel="noopener" class="me-btn">
+          查看测试用例基线
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>

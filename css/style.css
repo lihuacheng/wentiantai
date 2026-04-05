@@ -684,6 +684,11 @@ code {
 
 /* ══ 使用说明书入口 ══════════════════════════════════ */
 .manual-entry { background: var(--bg-warm); }
+.manual-entry-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 .manual-entry-card {
   display: flex;
